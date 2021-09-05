@@ -1,3 +1,7 @@
+---
+title: Quickstart Guide
+---
+
 ### Preface
 
 Terra's platform-agnostic API allows us to seamlessly support many Minecraft modding platforms,

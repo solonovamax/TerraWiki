@@ -1,0 +1,122 @@
+site_name: Terra Docs
+site_url: https://terra-wiki.dfsek.com/
+site_author: The Terra Contributors
+site_description: Docs for the Terra world generation engine
+
+repo_url: https://github.com/PolyhedralDev/TerraWiki
+#repo_name: PolyhedralDev/Terra
+
+#nav:
+#  - Welcome: 'index.md'
+#  - User Docs: 'user/'
+#  - Guides and Tutorials: 'guides/'
+#  - Pack Documentation:
+#    - 'packs/*'
+#    - Pack Config Files:
+#      - 'packs/config-files/*'
+
+theme:
+  font:
+    text: Fira Sans
+    code: Fira Code
+  name: material
+  custom_dir: overrides
+  palette:
+    - media:   "(prefers-color-scheme: dark)"
+      scheme:  slate
+      primary: green
+      accent:  cyan
+      toggle:
+        icon:  material/toggle-switch
+        name:  Switch to light mode
+    - media:   "(prefers-color-scheme: light)"
+      scheme:  default
+      primary: green
+      accent:  cyan
+      toggle:
+        icon:  material/toggle-switch-off
+        name:  Switch to dark mode
+  language: en
+#  icon:
+  logo: assets/img/terra_logo.png
+  icon:
+    logo: img/terra_logo.png
+    repo: fontawesome/brands/github
+  favicon: assets/img/terra_logo.png
+#  include_search_page: false
+#  search_index_only: true
+  features:
+    - navigation.instant
+#    - navigation.tracking
+    - navigation.tabs
+#    - navigation.sections
+#    - navigation.expand
+    - navigation.top
+#    - toc.integrate
+    - search.suggest
+    - search.highlight
+    - search.share
+
+extra:
+  manifest: manifest.webmanifest
+  social:
+    - icon: fontawesome/brands/discord
+      link: "https://discord.gg/PXUEbbF"
+      name: "Discord Server"
+    - icon: fontawesome/brands/github
+      link: "https://github.com/polyhedraldev/"
+      name: "Github Organization"
+  alternate:
+    - name: English
+      link: /
+      lang: en
+  version:
+    provider: mike
+
+plugins:
+  - search:
+      lang: en
+      separator: '[\s\-\.\,\_]+'
+#      prebuild_index: true # Enable for production
+  - section-index
+  - git-revision-date
+  - literate-nav:
+      nav_file: nav.md
+
+
+copyright: Community content is available under CC-BY-SA unless otherwise noted.
+
+markdown_extensions:
+  - meta
+  - abbr
+  - admonition
+  - toc:
+      permalink: true
+      toc_depth: 4
+  - pymdownx.magiclink:
+      repo_url_shortener: true
+      social_url_shortener: true
+      repo_url_shorthand: true
+      social_url_shorthand: true
+      provider: github
+      user: PolyhedralDev
+      repo: Terra
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.keys
+  - pymdownx.tilde
+  - pymdownx.caret
+  - pymdownx.tabbed
+  - pymdownx.details
+  - pymdownx.escapeall
+  - pymdownx.superfences
+  - pymdownx.smartsymbols
+  - attr_list
+
+extra_javascript:
+  - javascripts/config.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
