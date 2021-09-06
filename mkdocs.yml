@@ -4,7 +4,7 @@ site_author: The Terra Contributors
 site_description: Docs for the Terra world generation engine
 
 repo_url: https://github.com/PolyhedralDev/TerraWiki
-#repo_name: PolyhedralDev/Terra
+repo_name: PolyhedralDev/Terra
 
 #nav:
 #  - Welcome: 'index.md'
