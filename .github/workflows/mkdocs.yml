@@ -16,5 +16,7 @@ jobs:
                          mike \
                          mkdocs-section-index \
                          mkdocs-literate-nav \
-                         mkdocs-git-revision-date-plugin
+                         mkdocs-git-revision-date-plugin \
+                         mkdocs-autolinks-plugin \
+                         mkdocs-minify-plugin
       - run: mkdocs gh-deploy --force
