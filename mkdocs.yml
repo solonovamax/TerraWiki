@@ -3,17 +3,23 @@ site_url: https://terra-wiki.dfsek.com/
 site_author: The Terra Contributors
 site_description: Docs for the Terra world generation engine
 
-repo_url: https://github.com/PolyhedralDev/TerraWiki
+repo_url: https://github.com/PolyhedralDev/Terra
 repo_name: PolyhedralDev/Terra
+edit_uri: https://github.com/PolyhedralDev/TerraWiki/
 
-#nav:
-#  - Welcome: 'index.md'
-#  - User Docs: 'user/'
-#  - Guides and Tutorials: 'guides/'
-#  - Pack Documentation:
-#    - 'packs/*'
-#    - Pack Config Files:
-#      - 'packs/config-files/*'
+nav:
+  - Welcome: 'index.md'
+  - User Docs: 'user/'
+  - Guides and Tutorials:
+    - 'guides/*'
+    - Config Packs: 'guides/config-packs.md'
+    - Choosing an issue template: 'guides/issue-template.md'
+    - Configuration: 'guides/config/'
+    - Installation: 'guides/install/'
+  - Pack Documentation:
+    - 'packs/*'
+    - Pack Config Files:
+      - 'packs/config-files/'
 
 theme:
   font:
@@ -58,20 +64,24 @@ theme:
     - search.share
 
 extra:
+  disqus: terrawiki
   manifest: manifest.webmanifest
   social:
     - icon: fontawesome/brands/discord
       link: "https://discord.gg/PXUEbbF"
       name: "Discord Server"
     - icon: fontawesome/brands/github
-      link: "https://github.com/polyhedraldev/"
+      link: "https://github.com/PolyhedralDev/"
       name: "Github Organization"
   alternate:
     - name: English
       link: /
       lang: en
-  version:
-    provider: mike
+    - name: Francais
+      link: /fr/
+      lang: fr
+#  version:
+#    provider: mike
 
 plugins:
   - search:
@@ -82,7 +92,22 @@ plugins:
   - git-revision-date
   - literate-nav:
       nav_file: nav.md
-
+      implicit_index: true
+  - autolinks
+  - minify:
+      minify_html: true
+      minify_js: true
+      htmlmin_opts:
+          remove_comments: true
+      js_files:
+        - javascripts/config.js
+#  - mike:
+#      # these fields are all optional; the defaults are as below...
+#      version_selector: true   # set to false to leave out the version selector
+#      css_dir: css             # the directory to put the version selector's CSS
+#      javascript_dir: js       # the directory to put the version selector's JS
+#      canonical_version: null  # the version for <link rel="canonical">; `null`
+#                               # uses the version specified via `mike deploy`
 
 copyright: Community content is available under CC-BY-SA unless otherwise noted.
 
@@ -111,6 +136,7 @@ markdown_extensions:
   - pymdownx.caret
   - pymdownx.tabbed
   - pymdownx.details
+  - pymdownx.tasklist
   - pymdownx.escapeall
   - pymdownx.superfences
   - pymdownx.smartsymbols

@@ -1,18 +1,6 @@
-```diff
-! This section is incomplete !
-```
-
-> This guide is intended for the **Bukkit** version of Terra. Guides will be written for other platforms once they
-> mature.
-
-###### CONTENTS
-
-- [How Bukkit handles Terra worlds](#how-bukkit-handles-terra-worlds)
-  - [The Generator ID Format](#the-generator-id-format)
-- [Setting up a Terra World](#setting-up-a-terra-world)
-  - [Setting a Generator Through directly through Bukkit](#setting-a-generator-through-directly-through-bukkit)
-  - [Setting a Generator Through a World Manager](#setting-a-generator-through-a-world-manager)
-    - [Multiverse Core](#multiverse-core)
+!!! error "This section is incomplete"
+    This guide is intended for the **Bukkit** version of Terra. Guides will be written for other platforms once they
+    mature.
 
 ## How Bukkit handles Terra worlds
 
@@ -26,21 +14,19 @@ will be centered around configuring.
 For each [Configuration Pack](./Config-Packs), Terra will assign a Bukkit generator ID with the format
 `Terra:<PACK ID>`. for example the default pack with the ID `DEFAULT` will have a *generator ID* of `Terra:DEFAULT`.
 
-###### NOTE
-
->The `<PACK ID>` portion of the generator ID is **case sensitive** meaning that your capitalization within the generator
-ID must match that of the pack ID!
+???+ note
+    The `<PACK ID>` portion of the generator ID is **case sensitive** meaning that your capitalization within the generator
+    ID must match that of the pack ID!
 
 ## Setting up a Terra World
+
+???+ tip inline end
+    Terra comes pre-packaged with a default pack, which does not require a download/install. **If this is your first time
+    using Terra** then we suggest using the default, which uses the ID `DEFAULT`.
 
 There are two main ways to manage worlds on a Bukkit server: using a *world
 manager* (which is a separate plugin that is designed to well.. manage worlds) - or - directly through Bukkit.
 Both methods have their own advantages which we will cover in each section.
-
-###### TIP
-
->Terra comes pre-packaged with a default pack, which does not require a download/install. **If this is your first time
-using Terra** then we suggest using the default, which uses the ID `DEFAULT`.
 
 ### Setting a Generator Through directly through Bukkit
 

@@ -62,6 +62,7 @@ The following packs are intended to provide a small handful of content such as a
 and or other miscellaneous configs.
 
 Potential applications of partial packs may include:
+
 * Merging content such as biomes and structures into other packs.
 * Using the pack generation as a canvas for building.
 * Generating themed event worlds.
